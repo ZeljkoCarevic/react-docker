@@ -1,0 +1,18 @@
+stages:
+    - test
+    - build
+
+test:
+    image: node:17-alpine
+    stage: test
+    tags: test
+    script:
+        - npm test
+
+build:
+    image: node:17-alpine
+    stage: build
+    tags: build
+    script:
+        - docker compose up
+
