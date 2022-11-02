@@ -12,7 +12,7 @@ test:
         - npm test
 
 build:
-    image: docker:latest
+    image: docker:18-git
     stage: build
     tags:
         - build
