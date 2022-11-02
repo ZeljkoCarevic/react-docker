@@ -21,6 +21,7 @@ build:
         - docker:20.10.16-dind
     script:
         - docker build -t react_image:2.0 .
+        - docker login
         - docker push react_image:2.0
 
 
