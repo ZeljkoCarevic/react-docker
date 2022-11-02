@@ -12,7 +12,7 @@ test:
         - npm test
 
 build:
-    image: nginx:latest
+    image: centos:latest
     stage: build
     tags:
         - build
