@@ -16,6 +16,8 @@ build:
     stage: build
     tags:
         - build
+    services:
+        - docker:18-dind
     script:
         - docker compose up
 
