@@ -12,7 +12,7 @@ test:
         - npm test
 
 build:
-    image: centos:latest
+    image: rockylinux:9.0.20220720-minimal
     stage: build
     tags:
         - build
