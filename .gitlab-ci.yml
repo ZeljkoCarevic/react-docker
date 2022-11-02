@@ -11,13 +11,16 @@ test:
         - npm install
         - npm test
 
+before_script:
+  - docker info
+
 build:
-    image: docker:18-git
+    image: docker:docker:20.10.16
     stage: build
     tags:
         - build
     services:
-        - docker:18-dind
+        - docker:20.10.16-dind
     script:
         - docker build -t react_image:2.0 .
 
