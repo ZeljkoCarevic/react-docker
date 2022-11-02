@@ -11,8 +11,6 @@ test:
         - npm install
         - npm test
 
-before_script:
-  - docker info
 
 build:
     image: docker:docker:20.10.16
