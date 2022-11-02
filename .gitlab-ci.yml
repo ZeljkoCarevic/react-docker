@@ -12,14 +12,11 @@ test:
         - npm test
 
 build:
-    image: rockylinux:9.0.20220720-minimal
+    image: docker:latest
     stage: build
     tags:
         - build
     script:
-        -  dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-        -  dnf -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-        -  systemctl --now enable docker
         - docker compose up
 
 
