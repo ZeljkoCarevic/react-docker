@@ -1,6 +1,7 @@
 stages:
     - test
     - build
+    - deploy
 
 test:
     image: node:17-alpine
@@ -24,6 +25,13 @@ build:
     script:
         - docker build --pull -t "$CI_REGISTRY_IMAGE" .
         - docker push "$CI_REGISTRY_IMAGE"
+
+deploy:
+    image: bitnami/git:latest
+    stage: deploy
+    tags:
+        -build
+    script:
         - git remote add github https://github.com/ZeljkoCarevic/react-docker.git
         - git push --mirror github
 
