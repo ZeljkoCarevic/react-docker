@@ -22,6 +22,6 @@ build:
     script:
         - docker build -t react_image:2.0 .
         - docker login
-        - docker push react_image:2.0
+        - docker push zcarevic/react_image:2.0
 
 
