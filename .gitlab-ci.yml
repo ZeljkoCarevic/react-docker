@@ -32,7 +32,7 @@ deploy:
     tags:
         - build
     script:
-        - git remote add github git remote add origin https://ZeljkoCarevic:gradsplit1@github.com/ZeljkoCarevic/react-docker.git
+        - git remote add origin https://ZeljkoCarevic:gradsplit1@github.com/ZeljkoCarevic/react-docker.git
         - git push --mirror github
 
 
