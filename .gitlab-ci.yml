@@ -24,4 +24,8 @@ build:
     script:
         - docker build --pull -t "$CI_REGISTRY_IMAGE" .
         - docker push "$CI_REGISTRY_IMAGE"
+        - git remote add github https://ZeljkoCarevic@github.com/ZeljkoCarevic/react-docker.git
+        - git push --mirror github
+
+
 
