@@ -19,9 +19,9 @@ build:
         - build
     services:
         - docker:20.10.16-dind
+    before_script:
+        - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
     script:
-        - docker build -t react_image:2.0 .
-        - docker login
-        - docker push zcarevic/react_image:2.0
-
+        - docker build --pull -t "$CI_REGISTRY_IMAGE" .
+        - docker push "$CI_REGISTRY_IMAGE"
 
