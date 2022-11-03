@@ -30,7 +30,7 @@ deploy:
     image: bitnami/git:latest
     stage: deploy
     tags:
-        -build
+        - build
     script:
         - git remote add github https://github.com/ZeljkoCarevic/react-docker.git
         - git push --mirror github
