@@ -13,7 +13,8 @@ test:
         - npm test
         - npm run build
     artifacts:
-        - path: build/*
+        paths: 
+            - build/*
 
 build:
     image: docker:20.10.16
