@@ -43,7 +43,7 @@ deploy:
         - chmod 700 ~/.ssh
         - ssh-keyscan $IP_ADRESS >> ~/.ssh/known_hosts
         - chmod 644 ~/.ssh/known_hosts
-        - chmod 600 ~/.ssh/authorized_keys
+        - chmod 600 /home/kyze/.ssh/authorized_keys
     script:
         - ssh $SSH_USER@$IP_ADRESS "hostname && echo 'Welcome!!!' > welcome.txt"
     artifacts:
