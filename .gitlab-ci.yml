@@ -44,7 +44,7 @@ deploy:
         - ssh-keyscan $IP_ADRESS >> ~/.ssh/known_hosts
         - chmod 644 ~/.ssh/known_hosts
     script:
-        - ssh $SSH_USER@$IP_ADDRESS "hostname && echo 'Welcome!!!' > welcome.txt"
+        - ssh $SSH_USER@$IP_ADRESS "hostname && echo 'Welcome!!!' > welcome.txt"
     artifacts:
         paths:
             - public
