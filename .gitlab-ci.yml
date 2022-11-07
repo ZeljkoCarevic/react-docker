@@ -44,7 +44,7 @@ deploy:
         - ssh-keyscan $IP_ADRESS >> ~/.ssh/known_hosts
         - chmod 644 ~/.ssh/known_hosts
     script:
-        - ssh $SSH_USER@$IP_ADRESS "hostname && cp scp build/* root@188.34.147.227:~/build
+        - scp build root@188.34.147.227:/root/home
 
     artifacts:
         paths:
