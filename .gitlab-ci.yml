@@ -45,7 +45,7 @@ deploy:
         - chmod 644 ~/.ssh/known_hosts
     script:
         - ls build
-        - scp ./build root@188.34.147.227:/root/home
+        - scp -r ./build root@188.34.147.227:/root/home
 
     artifacts:
         paths:
