@@ -43,7 +43,7 @@ deploy:
         - chmod 700 ~/.ssh
         - ssh-keyscan $IP_ADRESS >> ~/.ssh/known_hosts
         - chmod 644 ~/.ssh/known_hosts
-        - dnf install rsync
+        - yum install rsync
     script:
         - ls build
         - rsync -avzhe ssh ./build root@188.34.147.227:/root/
